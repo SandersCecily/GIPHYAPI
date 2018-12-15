@@ -29,11 +29,13 @@ $(function(){
             })
                 .then(function(response) {
                 let output = response.data;
+                console.log(output);
                 for (let i = 0; i < output.length; i++) {
                     let gifDiv = $("<div>");
                     gifDiv.addClass("gifdiv");
-                    let rating = output[i].rating;
-                    let p = $("<p>").text("Rating: " + rating);
+                     let p = $("<p>").text("Title: " +  output[i].title + 
+                                        "\n Source: " + output[i].source +
+                                        "\n Rating: " + output[i].rating);
                     let reactiongif = $("<img>");
                     reactiongif.attr("src", output[i].images.fixed_height_small_still.url);
                     reactiongif.attr("status", "still");

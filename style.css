@@ -35,6 +35,10 @@ input{
     color: white;
     margin: 5px;
     float: left;
+    width: auto;
+    word-wrap: break-word;
+    white-space: pre;
+    font-family: 'Source Serif Pro', serif;
 }
 
 .gifbtn {
